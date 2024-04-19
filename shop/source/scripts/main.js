@@ -8,8 +8,10 @@ const products = [
 const renderProduct = (title, price) => {
     return `<div class="product-item">
                 <h3>${title}</h3>
-                <p>${price}</p>
-                <button class="buy-btn">Купить</button>
+                <div class="price-place">
+                    <p>${price}</p>
+                    <button class="buy-btn">Купить</button>
+                </div>
             </div>`
 };
 const renderPage = list => {
