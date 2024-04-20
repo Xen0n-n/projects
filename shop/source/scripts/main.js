@@ -9,7 +9,7 @@ const renderProduct = (title, price) => {
     return `<div class="product-item">
                 <img src="https://via.placeholder.com/200x200/258DC8/E0F6FD" alt="">
                 <h3>${title}</h3>
-                <p>${price}</p>
+                <p>${price} ₽</p>
                 <button class="buy-btn">Купить</button>
             </div>`
 };
@@ -17,7 +17,7 @@ const renderPage = list => {
     const productsList = list.map(item => renderProduct(item.title, item.price));
     console.log(productsList);
 
-    document.querySelector('.products').innerHTML = productsList.join(' ');
+    document.querySelector('.products').innerHTML = productsList.join('');
 };
 
 renderPage(products);

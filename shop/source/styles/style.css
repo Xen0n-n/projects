@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .products {
@@ -26,7 +27,6 @@
 .header_bar h2 {
     color: whitesmoke;
     margin-left: 2em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 button {
@@ -39,7 +39,7 @@ button {
     border-radius: 12px;
     border: 1px solid grey;
     border-radius: 5px;
-    width: 6em;
+    width: 7em;
     height: 3em;
     margin: 2em;
 }
