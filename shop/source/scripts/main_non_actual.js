@@ -7,7 +7,7 @@ const products = [
 //Функция для формирования верстки каждого товара
 const renderProduct = (product) => {
     return `<div class="product-item">
-                <img src="https://via.placeholder.com/200x150" alt="">
+                <img src="https://via.placeholder.com/200x200" alt="">
                 <h3>${product.title}</h3>
                 <p>${product.price} ₽</p>
                 <button class="buy-btn">Купить</button>
