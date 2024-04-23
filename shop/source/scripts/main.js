@@ -2,6 +2,7 @@ class ProductsList {
   constructor(container = ".products") {
     this.container = container;
     this.goods = [];
+    this.allProducts = [];
     this._fetchProducts();
   }
 
@@ -17,8 +18,13 @@ class ProductsList {
     const block = document.querySelector(this.container);
     for (let product of this.goods) {
       const productObj = new ProductItem(product);
+      this.allProducts.push(productObj);
       block.insertAdjacentHTML("beforeend", productObj.render());
+
     }
+  }
+  getSum() {
+    return this.allProducts.reduce((sum, item) => sum += item.price, 0)  // перебор массива с помощью reduce
   }
 }
 
@@ -42,3 +48,24 @@ class ProductItem {
 
 let list = new ProductsList();
 list.render();
+console.log(list.getSum())
+
+
+class Basket {
+  addGoods() {
+  }
+
+  removeGoods() {
+  }
+
+  changeGoods() {
+  }
+
+  render() {
+  }
+}
+
+class ElemBasket {
+  render(){
+  }
+}
