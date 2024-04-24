@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Icecream Menu</title>
 </head>
+
 <body>
     <form action="#" id="icecream-form">
         <fieldset id="icecream-fieldset">
@@ -47,7 +48,7 @@
                 <label for="сinnamon">20rub - Cinnamon</label><br>
             </fieldset>
 
-            <button id="check">Create an icecream</button>
+            <div id="check" style="margin: 1em;">Create an icecream</div>
             <p id="result">Total price: <span id="price">0</span><br>
 
         </fieldset>
@@ -55,12 +56,13 @@
     <script src="icecream-factory.js"></script>
     <script>
         window.onload = () => {
-        document.getElementById("check").addEventListener('click', () => {
-            let icecream = new Icecream('size', 'type', 'stuff', 'adds');
-            console.log(icecream);
-            // icecream.showSum("#price");
-        });
-    }
+            document.getElementById("check").addEventListener('click', () => {
+                let icecream = new Icecream('size', 'type', 'stuff', 'adds');
+                // console.log(icecream);
+                icecream.showSum("#price");
+            });
+        }
     </script>
 </body>
+
 </html>
