@@ -11,39 +11,39 @@
             <h3>Create your Icecream!</h3>
             <fieldset id="icecream-fildset-inside">
                 <h4>Choose a prefered size of an icecream</h4>
-                <input type="radio" name="size" id="bigicecream" data-price="150" checked>
+                <input type="radio" name="size" value="Big" id="bigicecream" data-price="150" checked>
                 <label for="bigicecream">150rub - Big icecream</label><br>
-                <input type="radio" name="size" id="medicecream" data-price="100">
+                <input type="radio" name="size" value="Medium" id="medicecream" data-price="100">
                 <label for="medicecream">100rub - Medium icecream</label><br>
-                <input type="radio" name="size" id="smallicecream" data-price="50">
+                <input type="radio" name="size" value="Small" id="smallicecream" data-price="50">
                 <label for="smallicecream">50rub - Small icecream</label><br>
             </fieldset>
 
             <fieldset id="icecream-fildset-inside">
                 <h4>Choose a type of an icecream</h4>
-                <input type="radio" name="type" id="coneicecream" data-price="20" checked>
+                <input type="radio" name="type" value="Cone" id="coneicecream" data-price="20" checked>
                 <label for="coneicecream">20rub - Icecream in a cone</label><br>
-                <input type="radio" name="type" id="cupicecream" data-price="10">
+                <input type="radio" name="type" value="Cup" id="cupicecream" data-price="10">
                 <label for="cupicecream">10rub - Icecream in a cup</label><br>
             </fieldset>
 
             <fieldset id="icecream-fildset-inside">
                 <h4>Choose a stuff</h4>
-                <input type="radio" name="stuff" id="chocolate" data-price="50" checked>
+                <input type="radio" name="stuff" value="Chocolate" id="chocolate" data-price="50" checked>
                 <label for="chocolate">50rub - Chocolate</label><br>
-                <input type="radio" name="stuff" id="pistachios" data-price="80">
+                <input type="radio" name="stuff" value="Pistachios" id="pistachios" data-price="80">
                 <label for="pistachios">80rub - Pistachios</label><br>
-                <input type="radio" name="stuff" id="vanilla" data-price="40">
+                <input type="radio" name="stuff" value="Vanilla" id="vanilla" data-price="40">
                 <label for="vanilla">40rub - Vanilla</label><br>
             </fieldset>
 
             <fieldset id="icecream-fildset-inside">
                 <h4>Choose some adds</h4>
-                <input type="checkbox" name="adds" id="sprinkles" data-price="10">
+                <input type="checkbox" name="adds" value="Chocolate sprinkles" id="sprinkles" data-price="10">
                 <label for="sprinkles">10rub - Chocolate sprinkles</label><br>
-                <input type="checkbox" name="adds" id="nuts" data-price="15">
+                <input type="checkbox" name="adds" value="Nuts" id="nuts" data-price="15">
                 <label for="nuts">15rub - Nuts</label><br>
-                <input type="checkbox" name="adds" id="сinnamon" data-price="20">
+                <input type="checkbox" name="adds" value="Cinnamon" id="сinnamon" data-price="20">
                 <label for="сinnamon">20rub - Cinnamon</label><br>
             </fieldset>
 
@@ -58,7 +58,7 @@
         document.getElementById("check").addEventListener('click', () => {
             let icecream = new Icecream('size', 'type', 'stuff', 'adds');
             console.log(icecream);
-            icecream.showSum("#price");
+            // icecream.showSum("#price");
         });
     }
     </script>
