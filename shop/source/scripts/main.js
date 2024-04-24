@@ -20,6 +20,10 @@ class ProductsList {
       })
   }
 
+  calcSum() {
+    return this.allProducts.reduce((accum, item) => accum += item.price, 0)  // перебор массива с помощью reduce
+  }
+
   render() {
     const block = document.querySelector(this.container);
     for (let product of this.goods) {
@@ -28,10 +32,7 @@ class ProductsList {
       block.insertAdjacentHTML("beforeend", productObj.render());
 
     }
-  }
-  getSum() {
-    return this.allProducts.reduce((sum, item) => sum += item.price, 0)  // перебор массива с помощью reduce
-  }
+  } 
 }
 
 class ProductItem {
