@@ -28,7 +28,11 @@ class ProductsList {
   }
 
   calcSum() {
-    return this.allProducts.reduce((sum, item) => sum += item.price, 0)  // перебор массива с помощью reduce
+    let sum = 0;
+    this.allProducts.forEach(item => {
+      sum += item.price;
+    });
+    return sum;
   }
 }
 
