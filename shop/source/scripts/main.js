@@ -18,26 +18,25 @@ class ProductsList {
       .catch(console => console.log(error))
   }
 
-  calcSum() {
-    return this.allProducts.reduce((accum, item) => accum += item.price, 0)  // перебор массива с помощью reduce
-  }
-
   render() {
     const block = document.querySelector(this.container);
     for (let product of this.goods) {
       const productObj = new ProductItem(product);
       this.allProducts.push(productObj);
       block.insertAdjacentHTML("beforeend", productObj.render());
-
     }
-  } 
+  }
+
+  calcSum() {
+    return this.allProducts.reduce((sum, item) => sum += item.price, 0)  // перебор массива с помощью reduce
+  }
 }
 
 class ProductItem {
   constructor(product, img = "https://via.placeholder.com/200x200") {
     this.title = product.product_name;
     this.price = product.price;
-    this.id = product.id;
+    this.id = product.id_product;
     this.img = img;
   }
 
@@ -51,7 +50,7 @@ class ProductItem {
   }
 }
 
-let list = new ProductsList();
+let list = new ProductsList(); // фактически асинхронная команда осторожно с кодом после нее
 
 
 // class Basket {
