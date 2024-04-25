@@ -15,9 +15,7 @@ class ProductsList {
   _getProducts() {
     return fetch(`${API}/catalogData.json`)
       .then(result => result.json())
-      .catch(console => {
-        console.log(error);
-      })
+      .catch(console => console.log(error))
   }
 
   calcSum() {
