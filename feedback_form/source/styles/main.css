@@ -1,0 +1,29 @@
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form-fieldset {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.feedback-form-fieldset label {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    
+}
+
+.feedback-form-fieldset textarea {
+    resize: none;
+    border-radius: 6px;
+    height: 70px;
+}
+
+.feedback-form-fieldset input {
+    border-radius: 3px;
+}
