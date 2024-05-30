@@ -9,6 +9,8 @@ function phone_validation(input){
 }
 
 function validate(){
-    console.log(email_validation('nsoft13@gmail.com'))
-    console.log(phone_validation('+7(977)966-83-52'))
+    const formData = new FormData(document.getElementById('feedback-form'));
+
+    console.log(email_validation(formData.get('email')))
+    console.log(phone_validation(formData.get('phone')))
 }
