@@ -10,7 +10,28 @@ function phone_validation(input){
 
 function validate(){
     const formData = new FormData(document.getElementById('feedback-form'));
+    const emailValCode = email_validation(formData.get('email'))
+    const phoneValCode = phone_validation(formData.get('phone'))
+    
+    if ((!emailValCode) || (!phoneValCode)){
+        if (emailValCode === null) {
+            document.getElementById('email').style.borderColor = 'red';
+        } else {
+            document.getElementById('email').style.borderColor = 'green';
+        }
+        if (phoneValCode === null) {
+            document.getElementById('phone').style.borderColor = 'red';
+        } else {
+            document.getElementById('phone').style.borderColor = 'green';
+        }
+        
+    } else {
+        document.getElementById('email').style.borderColor = 'green';
+        document.getElementById('phone').style.borderColor = 'green';
+    }
+    
 
     console.log(email_validation(formData.get('email')))
     console.log(phone_validation(formData.get('phone')))
 }
+
