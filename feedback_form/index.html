@@ -7,13 +7,13 @@
     <title>Feedback</title>
 </head>
 <body>
-    <form class="feedback-form" id="feedback-form">
+    <form class="feedback-form" id="feedback-form" onsubmit="check_and_submit(event)">
         <fieldset class="feedback-form-fieldset">
             <label>Ваше имя: <input type="text" name="name" id="name" placeholder="Иван Иванов" required autofocus></label>
             <label>Ваш email: <input type="email" name="email" id="email" placeholder="email@gmail.com" required></label>
             <label>Ваш телефон: <input type="text" name="phone" id="phone" placeholder="+7(000)000-00-00" required></label>
             <label>Место для текста: <textarea name="textarea" id="textarea" placeholder="Ваши пожелания" required></textarea></label>
-            <input type="button" onclick="validate()" value="Отправить">
+            <input type="submit" value="Отправить">
         </fieldset>
     </form>
 </body>
