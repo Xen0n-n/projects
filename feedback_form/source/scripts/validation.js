@@ -13,24 +13,13 @@ function validate(formData){
 
     if ((!emailValCode) || (!phoneValCode)){
         if (emailValCode === null) {
-            document.getElementById('email').style.borderColor = 'red';
-            document.getElementById('email').style.borderWidth = '2px';
-            document.getElementById('email').style.boxShadow= '0px 0px 2px 1px #ff0000';
-            
-        } else {
-            document.getElementById('email').style.borderColor = 'green';
+            document.getElementById('email').classList.add('invalid');
         }
         if (phoneValCode === null) {
-            document.getElementById('phone').style.borderColor = 'red';
-            document.getElementById('phone').style.borderWidth = '2px';
-            document.getElementById('phone').style.boxShadow= '0px 0px 2px 1px #ff0000';
-        } else {
-            document.getElementById('phone').style.borderColor = 'green';
+            document.getElementById('phone').classList.add('invalid');
         }
         return false;
     } else {
-        document.getElementById('email').style.borderColor = 'green';
-        document.getElementById('phone').style.borderColor = 'green';
         return true;
     }
 }
