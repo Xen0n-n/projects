@@ -3,27 +3,58 @@
     flex-direction: column;
 }
 
+.button {
+    color: white;
+    align-self: center;
+    width: 50%;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button-submit {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius: 10px !important; 
+}
+  
+.button-submit:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
 .feedback-form-fieldset {
     display: flex;
     flex-direction: column;
     align-self: center;
     width: 350px;
     border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+
 
 .feedback-form-fieldset label {
     display: flex;
     justify-content: space-between;
     margin: 1em;
-    
 }
 
 .feedback-form-fieldset textarea {
     resize: none;
     border-radius: 6px;
-    height: 70px;
+    height: 100px;
+    width: 200px;
 }
 
 .feedback-form-fieldset input {
+    border: 1px solid;
     border-radius: 3px;
+    transition: 0.3s;
 }
